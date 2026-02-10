@@ -97,14 +97,16 @@ function createFloatingElements() {
         container.appendChild(div);
     });
 
-    // Create bears
-    config.floatingEmojis.bears.forEach(bear => {
-        const div = document.createElement('div');
-        div.className = 'bear';
-        div.innerHTML = bear;
-        setRandomPosition(div);
-        container.appendChild(div);
-    });
+    // Create bears (only if configured)
+    if (config.floatingEmojis.bears && Array.isArray(config.floatingEmojis.bears)) {
+        config.floatingEmojis.bears.forEach(bear => {
+            const div = document.createElement('div');
+            div.className = 'bear';
+            div.innerHTML = bear;
+            setRandomPosition(div);
+            container.appendChild(div);
+        });
+    }
 }
 
 // Set random position for floating elements
