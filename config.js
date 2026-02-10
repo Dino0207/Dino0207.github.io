@@ -75,7 +75,7 @@ const CONFIG = {
     // Background Music (Optional)
     // Add your own music URL after getting proper licenses
     music: {
-        enabled: true,                     // Music feature is enabled
+        enabled: false,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
         musicUrl: "https://www.youtube.com/watch?v=MYqFcI-V50M&list=RDMYqFcI-V50M&start_radio=1", // Music streaming URL
         startText: "🎵 Play Music",        // Button text to start music
