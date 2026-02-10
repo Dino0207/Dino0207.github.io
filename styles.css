@@ -44,6 +44,59 @@ body {
     z-index: 1;
 }
 
+/* Envelope overlay (interactive mail start) */
+.envelope-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 60%),
+                linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
+    z-index: 5;
+}
+
+.envelope {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.envelope-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    clip-path: polygon(0 0, 100% 0, 50% 60%);
+}
+
+.envelope-letter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.envelope-greeting {
+    margin: 0 0 16px 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.open-letter-btn {
+    margin-top: 8px;
+}
+
 .heart, .bear {
     position: absolute;
     font-size: 2rem;
